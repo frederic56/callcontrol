@@ -83,7 +83,7 @@ ul{
 
 ul li{
     display: inline-block;
-    padding-left: 18px;
+    padding-left: 20px;
 }
 
 .nav-items, .nav-item, .nav-link:not(.post){
@@ -94,19 +94,19 @@ ul li{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #ffffff;
     transition: .5s linear;
-    letter-spacing: 1px;
+    letter-spacing: 0;
     text-shadow: 1px 1px 1px #141414;
     text-transform: uppercase;
 }
 
 .vue{
-    width: 52%;
+    width: 50%;
     position: absolute;
-    height: 50px;
-    padding: 10px;
+    height: 45px;
+    padding: 5px;
     background-color: #141414;
     z-index: -1;
-    margin-left: 620px;
+    margin-left: 642px;
     border-radius: 20px;
     opacity: .2;
 }
@@ -117,8 +117,8 @@ ul li a:not(.post):before{
     z-index: -1;
     width: 100%;
     height: 100%;
-    margin-top: -11px;
-    margin-left: -12px;
+    margin-top: -10px;
+    margin-left: -11px;
     padding: 10px;
     background: #C22323;
     border-radius: 15px;
@@ -324,7 +324,7 @@ ul li .post:hover::before{
 
 .container .card-section .card .card-body .content-body h3{
     font-size: 24px;
-    color: #3d3b3b;
+    color: #C22323;
     text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -366,3 +366,75 @@ ul li .post:hover::before{
     color: #C22323;
 }
 /*End scroll down color */
+
+/* Start contact-bloc */
+.before-footer{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #f1f0f0;
+}
+
+.before-footer .nav-link a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    background-color: #2f75dd;
+    text-shadow: none;
+    border-radius: 30px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px 20px 16px 20px;
+    font-weight: lighter;
+    transition: color .4s linear;
+    transition: .4s ease-in-out;
+}
+
+.before-footer .nav-link a:hover{
+    background-color: #C22323;
+    color: #ffff;
+}
+.before-footer .nav-link{
+    margin-top: 20px;
+}
+
+.before-footer .contactez-nous{
+    margin-left: 250px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-flow: column;
+    gap: 10px;
+}
+.before-footer .social-network{
+    margin-right: 350px;
+    padding: 20px;
+}
+
+.before-footer .social-network h1{
+    margin-bottom: 50px;
+}
+.before-footer .social-network .icons-social-network{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 40px;
+}
+.before-footer .social-network .icons-social-network iconify-icon:hover{
+    color: #2b2a2a;
+}
+
+footer{
+    width: 100%;
+    height: 450px;
+    background-color: #3d3b3b;
+}
+
+/* End contact-bloc */

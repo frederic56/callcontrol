@@ -29,7 +29,7 @@
                     <a class="nav-link" id="menu1" href="#">Accueil</a>
                 </li>
                 <li>
-                    <a class="nav-link" id="menu2" href="#">Nos service</a>
+                    <a class="nav-link" id="menu2" href="#">Nos services</a>
                 </li>
                 <li>
                     <a class="nav-link" id="menu3" href="#">A propos</a>
@@ -94,7 +94,7 @@
 
     </div>
 
-    <div class="container ">
+    <div class="container">
         <h1>Lorem ipsum dolor sit amet.</h1>
         <span>
             <hr>
@@ -117,6 +117,34 @@
             </div>
         </div>
     </div>
+
+    <div class="before-footer">
+        <div class="contactez-nous">
+            <h1>Contactez-Nous</h1>
+            <h4>Let's Improving your Business Today</h4>
+            <div class="nav-link">
+                <a href="#">Contactez-nous 
+                    <iconify-icon icon="material-symbols:arrow-right-alt-sharp"></iconify-icon>
+                </a>
+            </div>
+        </div>
+        
+        <div class="social-network">
+            <h1>Réseaux Sociaux</h1>
+            <hr>
+            <div class="icons-social-network">
+                <iconify-icon icon="uil:facebook" width="30"></iconify-icon> 
+                <iconify-icon icon="ri:instagram-fill" width="30"></iconify-icon>
+                <iconify-icon icon="fa6-brands:square-twitter" width="26"></iconify-icon>
+                <iconify-icon icon="mdi:google-plus" width="32"></iconify-icon>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <h1>footer-CallControl</h1>
+    </footer>
    
 </body>
 </html>

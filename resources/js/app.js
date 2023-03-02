@@ -25,20 +25,20 @@ function changeBg(){
     }
 }
 
-localStorage.setItem('headerBg', navbar)
-const headerBg = localStorage.getItem('headerBg')
-//inactif navigateur
+// localStorage.setItem('headerBg', navbar)
+// const headerBg = localStorage.getItem('headerBg')
+// //inactif navigateur
 
-const inactivityTime = 60;
-let lastActivityTime = Date.now();
- setInterval(() => {
-    if(document.hidden || (Date.now() - lastActivityTime) > inactivityTime * 60 * 1000){
-        alert('Vous avez été inactif pendant ' + inactivityTime + ' minutes. Veuillez recharger la page.');
-    }
- }, 1000)
+// const inactivityTime = 30;
+// let lastActivityTime = Date.now();
+//  setInterval(() => {
+//     if(document.hidden || (Date.now() - lastActivityTime) > inactivityTime * 120 * 1000){
+//         alert('Vous avez été inactif pendant ' + inactivityTime + ' minutes. Veuillez recharger la page.');
+//     }
+//  }, 1000)
 
- document.addEventListener('mousemove', () => {
-    lastActivityTime = Date.now();
-  });
+//  document.addEventListener('mousemove', () => {
+//     lastActivityTime = Date.now();
+//   });
 
 window.addEventListener('scroll', changeBg)
