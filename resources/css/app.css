@@ -74,14 +74,14 @@ header{
     width: 95%;
 }
 
-ul{
+.nav-items{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
 }
 
-ul li{
+.nav-item{
     display: inline-block;
     padding-left: 20px;
 }
@@ -243,18 +243,26 @@ ul li .post:hover::before{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #C22323;
-    color: #aaa7a7;
+    background-color: transparent;
+    color: #ffffff;
     font-size: 28px;
-    border: none;
-    outline: none;
+    border: 1px solid #C22323;
+    outline-color: #C22323;
     padding: 15px 35px 15px 35px;
     border-radius: 40px;
     transition: color 0.4s linear;
+    transition: .3s ease-in-out;
+    transform: scale(1);
+    overflow: hidden;
+    text-shadow: 1px 1px 1px #141414;
 }
 
 .container-fluid .btn .btn-contact:hover{
     color: #ffff;
+    transform: scale(1.05);
+    outline: #C22323;
+    background-color: #C22323;
+    text-shadow: none;
 }
 
 /* container */
@@ -295,7 +303,8 @@ ul li .post:hover::before{
 .container .card-section .card .card-body .img-fluid img{
     cursor: pointer;
     transform: scale(1);
-    transition: .4s ease-in-out;
+    transition: ease-in-out;
+    transition-duration: 1500ms;
 }
 
 .container .card-section .card .card-body .img-fluid:hover img{
@@ -324,7 +333,7 @@ ul li .post:hover::before{
 
 .container .card-section .card .card-body .content-body h3{
     font-size: 24px;
-    color: #C22323;
+    color: #252424;
     text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -395,11 +404,13 @@ ul li .post:hover::before{
     font-weight: lighter;
     transition: color .4s linear;
     transition: .4s ease-in-out;
+    transform: scale(1);
 }
 
 .before-footer .nav-link a:hover{
     background-color: #C22323;
     color: #ffff;
+    transform: scale(1.05);
 }
 .before-footer .nav-link{
     margin-top: 20px;
@@ -427,14 +438,59 @@ ul li .post:hover::before{
     margin-top: 20px;
     gap: 40px;
 }
+
 .before-footer .social-network .icons-social-network iconify-icon:hover{
+    transform: scale(1);
+    transition: .3s ease-in-out;
+}
+
+.before-footer .social-network .icons-social-network iconify-icon:hover{
+    transform: scale(1.06);
     color: #2b2a2a;
 }
 
 footer{
     width: 100%;
+    position: relative;
     height: 450px;
-    background-color: #3d3b3b;
+    background-color: #0a0a2b;
+    color: #ffff;
+    font-family: 'Roboto';
+    font-weight: normal;
+}
+
+footer .footer-content ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-content ul .contact{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    padding: 5px 50px 5px 50px;
+}
+
+footer .footer-content ul .contact li:hover{
+    color: #C22323;
+    transform: scale(1.05);
+}
+
+footer .footer-content ul .contact li{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+    transform: scale(1);
+}
+
+footer .footer-content ul .contact li p{
+    padding-left: 10px;
 }
 
 /* End contact-bloc */
