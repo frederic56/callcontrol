@@ -4,14 +4,16 @@
     margin: 0;
 }
 
+html, body{
+    height: 100%;
+}
+
 body{
-    position: relative;
+    font-family: 'Roboto';
+    animation: animate 30s ease-in-out infinite;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    animation: animate 30s ease-in infinite;
-    width: 100%;
-    height: 100vh;
-    font-family: 'Roboto';
 }
 
 @keyframes animate {
@@ -78,7 +80,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 650px;
 }
 
 .nav-item{
@@ -106,7 +108,7 @@ header{
     padding: 5px;
     background-color: #141414;
     z-index: -1;
-    margin-left: 642px;
+    margin-left: 50%;
     border-radius: 20px;
     opacity: .2;
 }
@@ -212,6 +214,7 @@ ul li .post:hover::before{
 
 .container-fluid{
     position: relative;
+    min-height: 100%;
 }
 .container-fluid .h1{
     margin-top: 60px;
@@ -260,7 +263,6 @@ ul li .post:hover::before{
 .container-fluid .btn .btn-contact:hover{
     color: #ffff;
     transform: scale(1.05);
-    outline: #C22323;
     background-color: #C22323;
     text-shadow: none;
 }
@@ -268,9 +270,8 @@ ul li .post:hover::before{
 /* container */
 
 .container{
-    margin-top: 100px;
     width: 100%;
-    height: auto;
+    min-height: 100%;
     background-color: #ffffff;
 }
 
@@ -380,9 +381,7 @@ ul li .post:hover::before{
 .before-footer{
     display: flex;
     justify-content: space-between;
-    position: relative;
     align-items: center;
-    position: relative;
     width: 100%;
     height: 400px;
     background-color: #f1f0f0;
@@ -450,11 +449,15 @@ ul li .post:hover::before{
 }
 
 footer{
-    width: 100%;
-    position: relative;
-    height: 450px;
-    background-color: #0a0a2b;
     color: #ffff;
+    background-color: #07071d;
+    height: 350px;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-content{
+    height: auto;
     font-family: 'Roboto';
     font-weight: normal;
 }
@@ -494,3 +497,116 @@ footer .footer-content ul .contact li p{
 }
 
 /* End contact-bloc */
+
+/* Active class */
+
+.nav-link .active:focus{
+    color: #C22323;
+}
+
+/* End of active class */
+.container-bas{
+    flex-grow: 1;
+    background-color: #2f75dd;
+}
+
+/*Menu section*/
+.menu-left{
+    display: none;
+
+}
+
+
+/*
+    Media queries
+*/
+
+@media screen and (max-width: 978px){
+    .navbar{
+        width: 95%;
+    }
+
+    body{
+        background-size: 100%;
+        background-position: top;
+        width: 100%;
+    }
+    
+    
+}
+
+@media screen and (max-width: 700px) {
+    .menu-left{
+        display: block;
+    }
+
+    .nav-items{
+        display: none;
+    }
+
+    .vue{
+        display: none;
+    }
+
+    .container-fluid .h1{
+        font-size: 55%;
+        margin-top: 0%;
+    }
+    .container-fluid .h4{
+        font-size: 55%;
+        margin-top: -2%;
+    }
+
+    .container-fluid .btn .btn-contact{
+        padding: 3px 7px 3px 7px;
+        font-size: 90%;
+        margin-top: -7%;
+    }
+
+    .brand img{
+        width: 100%;
+        height: 1%;
+    }
+
+    .brand a{
+        position: relative;
+        width: 10%;
+        margin-right: 90%;
+    }
+
+    .brand .nav-link{
+        display: none;
+    }
+
+    .nav-itemR{
+        background-color: #07071d;
+        padding: 15px 0px 15px 0px;
+        flex-direction: column;
+        border: 1px solid #fefefe;
+        transition: all .8s ease-in-out;
+    }
+    .nav-itemR .nav-item{
+        margin-bottom: 20px;
+    }
+
+    .menu-left iconify-icon{
+        color: #e0dddd;
+        transform: scale(1);
+        transition: all .2s ease-in-out;
+        text-shadow: 1px 1px 1px #141414;
+        border: 2px solid ;
+        border-radius: 5px ;
+    }
+    .menu-left iconify-icon:hover{
+        transform: scale(1.08);
+        color: #ffffff;
+    }
+    .menu-left iconify-icon:focus{
+        transform: scale(.8);
+        color: #ffffff;
+    }
+}
+
+
+
+

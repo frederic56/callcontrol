@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ImagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('homepage', [ImagesController::class, 'logo'])->name('homepage');
-//Route::get('homepage', [ImagesController::class, 'showArticle'])->name('homepage');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', [HomepageController::class, 'index']);
+Route::get('/nos-services', [HomepageController::class, 'index']);
+Route::get('/accueil', [HomepageController::class, 'accueil'])->name('accueil');
 
 //INSERT IN DATABASE
 Route::post('/logo', [ImagesController::class, 'index'])->name('logo');

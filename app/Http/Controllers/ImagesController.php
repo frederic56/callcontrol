@@ -37,27 +37,7 @@ class ImagesController extends Controller
         $requestData["image_article"] = '/storage/'.$path;
 
         Article::create($requestData);
-        return redirect('/homepage');
-    }
-
-    public function logo()
-    {
-        $id1  = 1;
-        $id2  = 5;
-        $img = Image::find($id1);
-        $fav = Image::find($id2);
-        return view('homepage', [
-            'items' => $img,
-            'fav' => $fav,
-            'articles' => Article::all()      
-        ]);
-    }
-
-    public function showArticle()
-    {
-        return view('homepage', [
-            'articles' => Article::all()
-        ]);
+        return redirect('/');
     }
 
 }
