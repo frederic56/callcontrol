@@ -4,25 +4,22 @@
     <div class="container-fluid">
         
         <div class="h1">
-            <h1>La qualité de service est notre priorité, <br>
-                SOLUTIONS FOR YOUR BUSINESS.</h1> <br> <br>
+            <h1>
+                SOLUTIONS FOR YOUR BUSINESS.</h1> 
         </div>
         <div class="h4">
-            <h4>Callcenter.com will help Reduce your Outsourcing budget and elevate <br>
-                your business Customer Experience so you can Grow, Launch and Scale
-                <br> new products and services Faster and Easier. Pour plus d’information
-            </h4>
+            <h4>Callcenter.com will help Reduce your.</h4>
+            <div class="btn">
+                <button class="btn-contact" type="button">
+                    Contactez-nous
+                    <iconify-icon icon="ep:message"></iconify-icon>
+                </button>
+            </div>
         </div>
     
-        <div class="btn">
-            <button class="btn-contact" type="button">
-                Contactez-nous
-                <iconify-icon icon="ep:message" width="28"></iconify-icon>
-            </button>
-        </div>
     
         <div class="container">
-            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h1>Grand Titre </h1>
             <span>
                 <hr>
             </span>
@@ -32,11 +29,10 @@
                         <div class="card-body">
                             <div class="img-fluid">
                                 <figure>
-                                    <img src="{{ $article->image_article }}" alt="" sizes=""
-                                        style="width:390px; height:270px;" srcset="">
+                                    <img src="{{ $article->image_article }}" alt="" sizes="" srcset="">
                                 </figure>
                             </div>
-                            <div class="content-body">
+                            <div class="card-content">
                                 <h3>{{ $article->titre_article }}</h3>
                                 <p>{{ $article->description }}</p>
                             </div>

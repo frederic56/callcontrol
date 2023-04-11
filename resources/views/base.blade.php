@@ -7,10 +7,11 @@
     <link rel="shortcut icon" href="{{$fav->logo}}" type="image/x-icon">
     {{-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> --}}
     <title>Homepage</title>
-
+    
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/iconify-icon.min.js'])
-    <!--<script src="https://code.iconify.design/iconify-icon/1.0.5/iconify-icon.min.js" defer></script> -->
+    @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js',
+    'resources/js/iconify-icon.min.js', 'resources/js/jQuery.js'
+    ])
 
 </head>
 <body id="body">
@@ -18,12 +19,11 @@
         @include('page.header')
     </header>
         
-    <div class="container-fluid">
         @yield('content')
-    </div>
-    <footer>
+ 
+    {{-- <footer>
         @include('page.footer')
-    </footer>
+    </footer> --}}
 
 </body>
 </html>
