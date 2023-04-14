@@ -71,10 +71,9 @@
                     </a>
                 </div>
             </div>
-    
+            <hr>
             <div class="social-network">
                 <h1>Réseaux Sociaux</h1>
-                <hr>
                 <div class="icons-social-network">
                     <iconify-icon icon="logos:facebook"></iconify-icon>  
                     <iconify-icon icon="skill-icons:instagram"></iconify-icon>                    <iconify-icon icon="skill-icons:twitter"></iconify-icon>                    

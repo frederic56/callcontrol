@@ -3,7 +3,7 @@
             <h2>Contactez-nous</h2>
             <div class="contact">
                 <li>
-                    <iconify-icon icon="ep:message" width ="18"></iconify-icon>
+                    <iconify-icon icon="ep:message"></iconify-icon>
                     <p>exemple@email.com</p>
                 </li>
                 <li>
@@ -46,7 +46,7 @@
                    <b>
                        <label for="">Votre e-mail</label> <br>
                        <input type="email" class="form-control" name="" id=""> <br>
-                       <label for="">Description</label> <br>
+                       <label for="">Commentaire</label> <br>
                        <textarea name="" id="" class="form-textarea" cols="40" rows="10"></textarea> <br>
                        <input type="button" class="btn-send" value="Envoyer">
                     </b> 
