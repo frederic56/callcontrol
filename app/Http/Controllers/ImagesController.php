@@ -20,7 +20,7 @@ class ImagesController extends Controller
         //Ajoute d'user connecté avec les donnés qui vient de champ formulaire pour qu'on ajouter sur le Model Article
        // $data = $requestData + ["user_id" => $user_connected];
         Image::create($requestData);
-        return redirect('/homepage');
+        return redirect('/');
     }
 
     /**

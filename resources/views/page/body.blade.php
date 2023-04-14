@@ -2,13 +2,32 @@
 
 @section('content')
     <div class="container-fluid">
-        
+{{--
+        <form action="/article" method="post" enctype="multipart/form-data">
+            @csrf
+            <label for="">Titre</label> <br>
+            <input type="text" name="titre_article" id=""> <br>
+            <label for="">Description</label> <br>
+            <textarea name="description" id="" cols="0" rows="5"></textarea> <br>
+            <input type="file" name="image_article" id="">
+            <input type="submit" value="enregistrer">
+        </form>
+--}}
+{{--    <form action="/logo" method="post" enctype="multipart/form-data">
+            @csrf
+            <label for="">icon</label> <br>
+            <input type="file" name="logo" id=""> <br>
+            <input type="submit" value="enregistrer">
+        </form>
+--}}  
         <div class="h1">
             <h1>
                 SOLUTIONS FOR YOUR BUSINESS.</h1> 
         </div>
         <div class="h4">
-            <h4>Callcenter.com will help Reduce your.</h4>
+            <h4>Callcenter.com will help Reduce your. <br>
+                Lorem ipsum dolor sit amet.
+            </h4>
             <div class="btn">
                 <button class="btn-contact" type="button">
                     Contactez-nous
@@ -57,11 +76,9 @@
                 <h1>Réseaux Sociaux</h1>
                 <hr>
                 <div class="icons-social-network">
-                    <iconify-icon icon="uil:facebook" width="30"></iconify-icon>
-                    <iconify-icon icon="ri:instagram-fill" width="30"></iconify-icon>
-                    <iconify-icon icon="fa6-brands:square-twitter" width="26"></iconify-icon>
-                    <iconify-icon icon="mdi:google-plus" width="32"></iconify-icon>
-                </div>
+                    <iconify-icon icon="logos:facebook"></iconify-icon>  
+                    <iconify-icon icon="skill-icons:instagram"></iconify-icon>                    <iconify-icon icon="skill-icons:twitter"></iconify-icon>                    
+                    <iconify-icon icon="logos:google-icon"></iconify-icon>                </div>
             </div>
         </div>
     </div>

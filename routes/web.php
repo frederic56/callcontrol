@@ -23,6 +23,6 @@ Route::get('/nos-services', [HomepageController::class, 'index']);
 Route::get('/accueil', [HomepageController::class, 'accueil'])->name('accueil');
 
 //INSERT IN DATABASE
-Route::post('/logo', [ImagesController::class, 'index'])->name('logo');
+Route::post('/logo', [ImagesController::class, 'logo'])->name('logo');
 Route::post('/article', [ImagesController::class, 'article'])->name('article');
 //END INSERT

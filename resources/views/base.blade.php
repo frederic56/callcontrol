@@ -12,6 +12,7 @@
     @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js',
     'resources/js/iconify-icon.min.js', 'resources/js/jQuery.js'
     ])
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </head>
 <body id="body">
@@ -21,9 +22,9 @@
         
         @yield('content')
  
-    {{-- <footer>
+    <footer>
         @include('page.footer')
-    </footer> --}}
+    </footer> 
 
 </body>
 </html>
