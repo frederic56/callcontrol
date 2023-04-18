@@ -59,6 +59,6 @@
 
     </div>
 </div>
-<span>
+<span class="copyright">
     copyright©callcontrol-2023
 </span>
