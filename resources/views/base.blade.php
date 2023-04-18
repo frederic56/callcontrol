@@ -20,11 +20,13 @@
         @include('page.header')
     </header>
         
-      @yield('content')
-     
+    @yield('content')
     <footer>
         @include('page.footer')
     </footer>  
+    {{--
+        
+   --}}
 
 
 </body>

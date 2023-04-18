@@ -21,8 +21,7 @@
         </form>
 --}}  
         <div class="h1">
-            <h1>
-                SOLUTIONS FOR YOUR BUSINESS.</h1> 
+            <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellendus! </h1> 
         </div>
         <div class="h4">
             <h4>Callcenter.com will help Reduce your. <br>
@@ -36,9 +35,9 @@
             </div>
         </div>
     
-    
+
         <div class="container">
-            <h1>Grand Titre </h1>
+            <h1> Lorem ipsum dolor sit amet. </h1>
             <span>
                 <hr>
             </span>
@@ -74,6 +73,7 @@
             <hr>
             <div class="social-network">
                 <h1>Réseaux Sociaux</h1>
+                <hr>
                 <div class="icons-social-network">
                     <iconify-icon icon="logos:facebook"></iconify-icon>  
                     <iconify-icon icon="skill-icons:instagram"></iconify-icon>                    <iconify-icon icon="skill-icons:twitter"></iconify-icon>                    
@@ -81,4 +81,5 @@
             </div>
         </div>
     </div>
+    
     @endsection

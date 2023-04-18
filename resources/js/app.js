@@ -82,21 +82,21 @@ menu.addEventListener('click', function(e){
 
 
 
-// function changeBg(){
-//     var navbar = document.querySelector('.navbar');
+ function changeBg(){
+     var navbar = document.querySelector('.navbar');
     
-//     var scrollValue = window.scrollY
-//     if (scrollValue < 80) {
-//         navbar.classList.remove('navbarColor')
-//        // navLink.classList.remove('items');  
-//         Vue.style.display = "block"
-//     }else{
-//         navbar.classList.add('navbarColor') 
-//         Vue.style.display = "none"
-//        // navLink.classList.add('items');      
-//     }
-// }
-// window.addEventListener('scroll', changeBg)
+     var scrollValue = window.scrollY
+     if (scrollValue < 80) {
+         navbar.classList.remove('navbarColor')
+        // navLink.classList.remove('items');  
+         Vue.style.display = "block"
+    }else{
+       navbar.classList.add('navbarColor') 
+       Vue.style.display = "none"
+      // navLink.classList.add('items');      
+    }
+ }
+window.addEventListener('scroll', changeBg)
 
 
 // // localStorage.setItem('headerBg', navbar)
