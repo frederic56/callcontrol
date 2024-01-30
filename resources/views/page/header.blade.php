@@ -1,7 +1,7 @@
 <nav class="navbar" id="navbarId">
     <div class="brand">
         <a href="/">
-           <img src="{{$items->logo}}" alt="" srcset="">
+           {{-- <img src="{{$items->logo}}" alt="" srcset=""> --}}
         </a>
         {{-- 
         <span class="TabView">
@@ -11,7 +11,7 @@
     </div>
     <iconify-icon icon="majesticons:menu" id="menu" class="menu"></iconify-icon>
     <li class="postule">
-        <a class= "btn-post" href="#">
+        <a class= "btn-post" href="/postuler-user">
             Postulez
             <iconify-icon icon="ep:message"></iconify-icon>
         </a>
@@ -35,7 +35,7 @@
             {{--
                 --}}
             <li class="link-post">
-                <a class= "nav-link" href="#">
+                <a class= "nav-link" href="/postuler-user">
                     Postulez
                     <iconify-icon icon="ep:message"></iconify-icon>
                 </a>

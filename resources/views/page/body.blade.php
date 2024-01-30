@@ -42,9 +42,9 @@
                 <hr>
             </span>
             <div class="card-section">
-                <div class="card">
-                    @foreach ($articles as $article)
-                        <div class="card-body">
+                @foreach ($articles as $article)
+                <div class="card-img">
+                        <div class="card-body-img">
                             <div class="img-fluid">
                                 <figure>
                                     <img src="{{ $article->image_article }}" alt="" sizes="" srcset="">
@@ -55,8 +55,8 @@
                                 <p>{{ $article->description }}</p>
                             </div>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                        @endforeach
             </div>
         </div>
     

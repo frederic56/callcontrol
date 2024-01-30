@@ -7,6 +7,8 @@
     {{-- <link rel="shortcut icon" href="{{$fav->logo}}" type="image/x-icon"> --}}
     {{-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> --}}
     <title>Homepage</title>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/sass/app.scss', 'resources/js/app.js',
@@ -15,16 +17,13 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </head>
-<body id="body-base">
-    <header class="header" id="headerId">
-        @include('page.header')
-    </header>
- 
-    @yield('content')
+    <body>
     
-    <footer>
-        @include('page.footer')
-    </footer>  
+        <div class="admin-section">
+            @include('admin.navbar')
+            @yield('content')
+            
+        </div>
 
     </body>
 </html>

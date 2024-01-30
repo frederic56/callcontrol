@@ -1,0 +1,44 @@
+.admin-update{
+    .admin-update-content{
+        form{
+            width: 500px;
+            padding: 10px;
+            padding-bottom: 10px;
+            .update-field{
+                display: flex;
+                flex-direction: column;
+                input{
+                    border: 1px solid black;
+                    outline: none;
+                    border-radius: 5px;
+                    padding: 2px;
+                    &:focus{
+                        border: 2px solid rgb(45, 240, 6);
+                    }
+                }
+                textarea{
+                    outline: none;
+                    border-radius: 5px;
+                    &:focus{
+                        border: 2px solid rgb(45, 240, 6);
+                    }
+
+                }
+            }
+            .update-btn{
+                border: none;
+                background-color: rgb(9, 187, 9);
+                color: white;
+                padding: 5px 10px;
+                border-radius: 5px;
+                font-size: 18px;
+                font-weight: 500;
+                margin-top: 10px;
+            }
+            .btn-close{
+                background-color: red;
+                padding: 10px;
+            }
+        }
+    }
+}

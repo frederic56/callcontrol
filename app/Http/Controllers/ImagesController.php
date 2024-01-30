@@ -30,7 +30,7 @@ class ImagesController extends Controller
     public function article(Request $request)
     {
         $requestData = $request->all();
-
+    
         $request->validate(['image_article' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048']);
         $imageName = time().'_'.$request->file('image_article')->getClientOriginalName();
         $path = $request->file('image_article')->storeAs('images_articles', $imageName, 'public');

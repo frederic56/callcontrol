@@ -1,0 +1,42 @@
+.admin-navbar{
+    background-color: grey;
+    .admin-navbar-content{
+        .admin-navbar-header{
+            padding: 10px;
+            border-bottom: 1.5px solid white;
+            a{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                img{
+                    width: 50px;
+                    height: auto;
+                    object-fit: cover;
+                }
+                span{
+                    font-size: 25px;
+                    color: white;
+
+                }
+            }
+        }
+        .admin-navbar-link{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            a{
+                padding: 10px;
+                text-decoration: none;
+                color: white;
+                font-size: 15px;
+                font-weight: 600;
+                transition: .4s ease-in-out;
+                &:hover{
+                    background-color: white;
+                    color: aqua;
+                }
+            }
+        }
+    }
+}

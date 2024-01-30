@@ -1,3 +1,19 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+@import 'admin-layout';
+@import 'admin-navbar';
+@import 'admin-insert';
+@import 'admin-update';
+@import 'user-postule';
+
+
 *{
     padding: 0;
     margin: 0;
@@ -9,7 +25,7 @@ html, body{
     height: 100%;
 }
 
-body{
+#body-base{
     //animation: animate 30s ease-in-out infinite;
     background-image: url('/public/bg/04.jpg');
     background-position: center;
@@ -33,7 +49,7 @@ body{
 //For mobile phone
 @media screen and (min-width: 268px ) and (max-width: 586px){
     body{
-       background-size: 100%;
+       background-size: 130%;
        background-position: top;
        background-position-y: 5%;
 //Header section
@@ -300,8 +316,9 @@ body{
                 width: 90%;
                 color: #fefefe;
                 text-shadow: 2px 2px 2px #1f1e1e;
-                font-size: 10px;
+                font-size: 8px;
                 text-align: center;
+                opacity: 1;
                 margin-top: 30px;
             }
             .h4{
@@ -311,11 +328,13 @@ body{
                 color: #fffefe;
                 text-shadow: 2px 2px 2px #0c0c0c;
                 text-align: center;
-                font-size: 14px;
+                font-size: 11px;
+               
                 gap: 8px;
                 margin-top: 5px;
                 h4{
                     padding: 10px;
+                    opacity: 0.8;
                 }
                 .btn{
                     display: flex;
@@ -326,14 +345,14 @@ body{
                         align-items: center;
                         justify-content: center;
                         font-weight: 500;
-                        padding: 10px 10px;
-                        margin-top: 10px;
-                        //border-radius: 15px;
+                        padding: 12px 10px;
+                        margin-top: 5px;
+                        border-radius: 15px;
                         background: #C22323;
                         border: none;
                         color: #fcfafa;
                         gap: 5px;
-                        font-size: 18px;
+                        font-size: 16px;
                         transition: all .4s ease-in-out;
                         transform: scaleX(1);
                         &:hover{
@@ -357,6 +376,8 @@ body{
                     text-align: center;
                     margin-bottom: 10px;
                     margin-top: 10px;
+                    font-size: 20px;
+                    padding: 2px 5px;
                 }
                 .card-section{
                     margin-top: 20px;
@@ -366,6 +387,7 @@ body{
                         justify-content: center;
                         align-items: stretch;
                         flex-wrap: wrap;
+                        flex-direction: column;
                         .card-body{
                             //border: 1px solid #9e9b9b;
                             width: 90%;
@@ -1237,8 +1259,7 @@ body{
     }
 }
 
-
-@media screen and (min-width: 768px)  and (max-width: 1168px) {
+@media screen and (min-width: 768px)  and (max-width: 1080px) {
     body{
         background-size: 100%;
         background-position: top;
@@ -1677,7 +1698,7 @@ body{
     }
 }
 
-@media screen and (min-width: 1168px) and (max-width: 1378px) {
+@media screen and (min-width: 1080px) and (max-width: 1366px) {
     body{
         background-size: 100%;
         background-position: top;
@@ -1879,32 +1900,35 @@ body{
             }
             .card-section{
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 margin-top: 20px;
+                gap: 20px;
                 //background: #22a6f1;
-                margin-bottom: 20px;
-                .card{
-                    display: flex;
-                    align-items: stretch;
-                    width: 90%;
-                    margin-left: 30px;
-                    flex-wrap: wrap;
-                    //background: #888383;
-                    gap: 50px;
-                    padding: 20px;
+                flex-wrap: wrap;
+                // margin-bottom: 20px;
+                .card-img{
+                    // display: flex;
+                    // align-items: stretch;
+                    width: 30%;
+                    // background: #888383;
+                    // flex-direction: column;
                     //padding-left: 30px;
-                    .card-body{
-                        width: 30%;
+                    box-shadow: 2px 2px 2px 1px #dadada;
+                    .card-body-img{
                         display: flex;
                         align-items: center;
                         flex-direction: column;
-                        box-shadow: 2px 2px 2px 1px #dadada;
+                        // background-color: #22a6f1;
                         .img-fluid{
-
+                            // background-color: #63c223;
+                            width: 100%;
                             figure{
                                 overflow: hidden;
+                                background-color: #C22323;
                                 img{
                                     width: 100%;
+                                    height: 200px;
+                                    object-fit: cover;
                                     cursor: pointer;
                                     transform: scale(1);
                                     transition: ease-in-out;
@@ -1917,9 +1941,9 @@ body{
                         }
                     }
                     .card-content{
-                        padding: 15px;
-                        text-align: center;
-                        margin-top: 10px;
+                        padding: 5px;
+                        text-align: start;
+                        // margin-top: 10px;
                         h3{
                             margin-bottom: 10px;
                             font-size: 100%;
@@ -2123,6 +2147,13 @@ body{
 }
 
 
+
+
+
+
+
+
+//Remember the width was changed 1168px and 1378px
 
 
 

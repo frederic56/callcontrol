@@ -1,0 +1,15 @@
+.user-postule{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        width: 600px;
+        padding: 10px;
+        .postule-field{
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+}

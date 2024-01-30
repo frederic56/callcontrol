@@ -13,20 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table)
+        Schema::create('postules', function (Blueprint $table)
         {
             $table->id();
-            $table->string('titre_article');
-            $table->longText('description');
-            $table->string('image_article');
+            $table->string('name');
+            $table->string('email');
+            $table->string('number');
+            $table->string('user_cv');
             $table->timestamps();
 
             // $table->unsignedBigInteger('user_id');
             // $table->foreign('user_id')->references('id')->on('users');
-            $table->foreignId('user_id')->constrained();
+            // $table->foreignId('user_id')->constrained();
         
         });
-
     }
 
     /**
