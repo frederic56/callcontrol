@@ -4,10 +4,11 @@
     
     <div class="admin-view-article">
         <div class="admin-view-content">
-            <a href="{{ route('insert-article') }}">Add article</a>
+            <a class="ad-insert" href="{{ route('insert-article') }}">Add article</a>
 
-            <table>
-                <thead>
+            <table class="table table-striped table-hover">
+                <thead class="ad-thead">
+                    <hr>
                     <tr>
                         <th>
                             id
@@ -23,15 +24,21 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="ad-tbody">
                     @if ($articles->count() > 0)
                         @foreach ($articles as $article)    
-                            <tr>
+                            <tr class="ad-tr">
                                 <td>{{$article->id}}</td>
-                                <td>{{$article->titre_article}}</td>
+                                <td class="ad-titre-tbody">{{$article->titre_article}}</td>
                                 <td>{{$article->description}}</td> 
-                                <td><a href="/update-article/{{ $article->id}}">Update</a></td>                           
-                                <td><a href="/delete-article/{{ $article->id}}">Delete</a></td>                           
+                                <td>
+                                    <a class="ad-edit" href="/update-article/{{ $article->id}}">
+                                        <iconify-icon icon="basil:edit-outline" with="2em" height="2em"></iconify-icon>
+                                    </a>
+                            </td>                           
+                                <td><a class="ad-delete" href="/delete-article/{{ $article->id}}">
+                                    <iconify-icon icon="fluent:delete-32-regular" with="2em" height="2em"></iconify-icon>
+                                </a></td>                           
                             </tr>
 
                         @endforeach
@@ -43,3 +50,4 @@
     </div>
 
 @endsection
+

@@ -20,7 +20,7 @@
     <body>
     
         <div class="admin-section">
-            @include('admin.navbar')
+            @include('admin.sidebar')
             @yield('content')
             
         </div>

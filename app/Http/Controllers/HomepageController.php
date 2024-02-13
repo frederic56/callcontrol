@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use App\Models\Article;
+use App\Models\Comments;
 use App\Models\Postule;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomepageController extends Controller
 {
@@ -20,6 +23,18 @@ class HomepageController extends Controller
         ]);
         
     }
+    public function logo()
+    {
+        $id  = 1;
+        $img = Image::find($id);
+        dd($img);
+        //die();
+        return view('page/header', [
+            'items' => $img,
+            'fav' => $img,
+        ]);
+        
+    }
 
     public function showArticle()
     {
@@ -28,11 +43,11 @@ class HomepageController extends Controller
         ]);
     }
 
-    public function accueil()
+    public function a_propos()
     {
         $id = 1;
         $img = Image::find($id);
-        return view('page/accueil', [
+        return view('page/a_propos', [
             'fav' => $img,
             'items' => $img
         ]);
@@ -52,6 +67,31 @@ class HomepageController extends Controller
     public function postule_user()
     {
         return view('page.postule_user');
+    }
+    public function admin_home()
+    {
+        if (Auth::user()) {
+            return view('admin.home');
+        }else {
+            return view('auth.login');
+        }
+
+    }
+    public function admin_register()
+    {
+        if (Auth::user() != null) {
+            return view('auth.register');
+        }else {
+            // return view('admin.home');
+        }
+
+    }
+    
+    public function admin_user_comments()
+    {
+        return view('admin.comments', [
+            'comments' => Comments::all()
+        ]);
     }
 
     public function insert_postule( Request $request)
@@ -79,4 +119,13 @@ class HomepageController extends Controller
         ]);
         return redirect('/postuler-user');
     }
+
+    public function add_comment(Request $request)
+    {
+        Comments::create([
+                "comments" => $request->comments
+            ]);
+        return redirect('/');
+    }
+
 }

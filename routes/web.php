@@ -23,13 +23,14 @@ use App\Http\Controllers\HomepageController;
 Route::get('/', [HomepageController::class, 'index']);
 Route::get('/homepage', [HomepageController::class, 'index'])->name('homepage');
 Route::get('/nos-services', [HomepageController::class, 'nos_service']);
-Route::get('/accueil', [HomepageController::class, 'accueil'])->name('accueil');
+Route::get('/a-propos', [HomepageController::class, 'a_propos'])->name('a_propos');
 Route::get('/postuler-user', [HomepageController::class, 'postule_user'])->name('postuler-user');
 
 //INSERT IN DATABASE
 Route::post('/logo', [ImagesController::class, 'logo'])->name('logo');
 Route::post('/article', [ImagesController::class, 'article'])->name('article');
 Route::post('/insert-postuler', [HomepageController::class, 'insert_postule'])->name('insert-postuler');
+Route::post('/user-comment', [HomepageController::class, 'add_comment'])->name('user-comment');
 //END INSERT
 
 //POSTULE
@@ -51,4 +52,9 @@ Route::get('/update-article/{id}', [HomeController::class, 'update_article'])->n
 Route::put('/update/{id}', [HomeController::class, 'update'])->name('update');
 
 //POSTULE
-Route::get('/admin-postuler', [HomeController::class, 'admin_postule'])->name('admin-postuler');
+Route::get('/admin-candidate', [HomeController::class, 'admin_candidate'])->name('admin-candidate');
+Route::get('/admin-home', [HomepageController::class, 'admin_home'])->name('admin-home');
+Route::get('/admin-logout', [HomepageController::class, 'admin_logout'])->name('admin-logout');
+Route::get('/admin-social-net', [HomepageController::class, 'admin_social_net'])->name('admin-social-net');
+Route::get('/user-comments', [HomepageController::class, 'admin_user_comments'])->name('user-comments');
+Route::get('/admin-register', [HomepageController::class, 'admin_register'])->name('admin-register');

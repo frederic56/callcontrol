@@ -110,10 +110,10 @@ class HomeController extends Controller
         return redirect('/view-article')->with('success', 'Article updated');
     }
 
-    public function admin_postule()
+    public function admin_candidate()
     {
-        $postule = Postule::orderBy('id', 'desc')->get();
-        return view('admin.postule', ['postules' => $postule]);
+        $candidate = Postule::orderBy('id', 'desc')->get();
+        return view('admin.candidate', ['candidates' => $candidate]);
     }
 
 }

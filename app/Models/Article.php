@@ -11,8 +11,8 @@ class Article extends Model
     use HasFactory;
     protected $table = 'articles';
     protected $primarykey = 'id';
-    protected $fillable = ['titre_article', 'description', 'image_article', 'user_id'];
-
+    protected $fillable = ['titre_article', 'description', 'image_article'];
+    // , 'user_id'
     // public function user()
     // {
     //     return $this->belongsTo(User::class);

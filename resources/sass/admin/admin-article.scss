@@ -1,0 +1,56 @@
+.admin-view-article{
+    padding: 20px;
+    .admin-view-content{
+        .ad-insert{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            text-decoration: none;
+            padding: 9px 13px 9px 13px;
+            background-color: rgb(49, 113, 187);
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-radius: 25px;
+            transform: scale(1);
+            transition: .4s ease-in-out;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+        .table{
+            .ad-thead{
+                tr{
+                    text-transform: uppercase;
+                }
+            }
+            .ad-tbody{
+                .ad-tr{
+                    .ad-titre-tbody{
+                        text-transform: uppercase;
+                    }
+                    .ad-edit{
+                        display: flex;
+                        transform: scale(1);
+                        transition: .4s ease-in-out;
+                        color: rgb(86, 87, 84);
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                    .ad-delete{
+                        display: flex;
+                        margin-right: 20px;
+                        transform: scale(1);
+                        transition: .4s ease-in-out;
+                        color: red;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
