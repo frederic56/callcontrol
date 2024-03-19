@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Postule extends Model
+class Offre extends Model
 {
     use HasFactory;
-    protected $table = 'postules';
+    protected $table = 'offres';
     protected $primarykey = 'id';
-    protected $fillable = ['name', 'email', 'number', 'user_cv', 'titre_offre'];
+    protected $fillable = ['titre', 'description', 'mission', 'profil', 'salaire'];
 }

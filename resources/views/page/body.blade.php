@@ -29,6 +29,31 @@
             </div>
 
         </div>
+        <hr class="line-body"/>
+        <div class="before-footer-stat">
+            <div class="col-sm-3">
+                <iconify-icon icon="material-symbols-light:headset-mic" with="3em" height="3em"></iconify-icon>
+                <h4>AMÉLIOREZ L'EXPÉRIENCE
+                    CLIENT</h4>
+                <p>Nous connaissons nos clients et savons délivrer une expérience personnalisée et adéquate.</p>
+            </div>
+            <div class="col-sm-3">
+                <iconify-icon icon="nimbus:stats" with="3em" height="3em"></iconify-icon>
+                <h5>AUGMENTEZ VOTRE
+                    CHIFFRE D'AFFAIRES</h5>
+            </div>
+            <div class="col-sm-3">
+                <iconify-icon icon="fluent:wrench-settings-24-regular" with="3em" height="3em"></iconify-icon>
+                <h5>RÉDUISEZ VOS COÛTS
+                    INSTANTANÉMENT</h5>
+            </div>
+            <div class="col-sm-3">
+                <h5>
+                    AUGMENTEZ VOTRE VISIBILITÉ
+                </h5>
+                <iconify-icon icon="material-symbols-light:headset-mic" with="3em" height="3em"></iconify-icon>
+            </div>
+        </div>
         <div class="before-footer">
             <div class="before-footer-container">
                 <div class="before-footer-left">

@@ -40,7 +40,7 @@
                     text-decoration: none;
                     color: white;
                     font-size: 15px;
-                    font-weight: 500;
+                    // font-weight: 500;
                     gap: 10px;
                     transition: .4s ease-in-out;
                     &:hover{
@@ -48,44 +48,113 @@
                         color: aqua;
                     }
                 }
-                .ad-sb-user{
+                #user{
                     display: flex;
-                    align-items: start;
+                    align-items: center;
                     padding: 10px;
                     text-decoration: none;
-                    color: white;
+                    color: #fff;
                     font-size: 15px;
-                    font-weight: 500;
+                    // font-weight: 500;
                     gap: 10px;
                     transition: .4s ease-in-out;
                     &:hover{
                         background-color: white;
+                        color: #00ffff;
+                    }
+                    // .flech{
+                    //     width: 0;
+                    //     height: 0;
+                    //     border-left: 5px solid transparent;
+                    //     border-right: 5px solid transparent;
+                    //     border-top: 6px solid #fff;
+                    //     &:hover{
+                            
+                    //     }
+                    // }
+                    .icon-visible{
+                        // font-weight: 600;
+                        transform: rotate(-90deg);
+                        transition-duration: 0.4s;
+                        transition-property: transform;
+                    }
+                    .icon-visible.on{
+                        // font-weight: 600;
+                        transform: rotate(0deg);
+                    }
+
+                }
+            
+                .comment.on{
+                    display: block;
+                    align-items: center;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 15px;
+                    // font-weight: 500;
+                    transition: 0.4s ease-in-out;
+                    gap: 10px;
+                    &:hover{
+                        background-color: white;
                         color: aqua;
                     }
+                }
+                .comment{
+                    display: none;
+                    background-color: #1f182b;
                 }
                 .ad-sb-pages{
                     display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 15px;
+                    // font-weight: 500;
+                    gap: 10px;
+                    transition: .4s ease-in-out;
+                    &:hover{
+                        background-color: white;
+                        color: aqua;
+                    }
+                    #icon-page{
+                        // font-weight: 600;
+                        transform: rotate(-90deg);
+                        transition-duration: 0.4s;
+                        transition-property: transform;
+                    }
+                    #icon-page.on{
+                        // font-weight: 600;
+                        transform: rotate(0deg);
+                    }
+                }
+                .ad-sb-article.on{
+                    display: flex;
                     align-items: start;
                     padding: 10px;
                     text-decoration: none;
                     color: white;
                     font-size: 15px;
-                    font-weight: 500;
+                    // font-weight: 500;
+                    transition: 0.4s ease-in-out;
                     gap: 10px;
-                    transition: .4s ease-in-out;
                     &:hover{
                         background-color: white;
                         color: aqua;
                     }
                 }
                 .ad-sb-article{
+                    display: none;
+                }
+                .ad-sb-cand.on{
                     display: flex;
-                    align-items: start;
+                    align-items: center;
                     padding: 10px;
                     text-decoration: none;
                     color: white;
                     font-size: 15px;
-                    font-weight: 500;
+                    // font-weight: 500;
                     gap: 10px;
                     transition: .4s ease-in-out;
                     &:hover{
@@ -93,19 +162,70 @@
                         color: aqua;
                     }
                 }
+
                 .ad-sb-cand{
+                    display: none;
+                }
+
+                .ad-sb-logout{
                     display: flex;
-                    align-items: start;
+                    align-items: center;
                     padding: 10px;
                     text-decoration: none;
                     color: white;
                     font-size: 15px;
+                    // font-weight: 500;
+                    gap: 10px;
+                    transition: .4s ease-in-out;
+                    &:hover{
+                        background-color: white;
+                        color: aqua;
+                    }
+                }
+                .ad-sb-social{
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 13px;
                     font-weight: 500;
                     gap: 10px;
                     transition: .4s ease-in-out;
                     &:hover{
                         background-color: white;
                         color: aqua;
+                    }
+                    #icon-social{
+                        transform: rotate(-90deg);
+                        transition-duration: 0.4s;
+                        transition-property: transform;
+                    }
+                    #icon-social.on{
+                        transform: rotate(0deg);
+                    }
+                }
+            
+                ul{
+                    .ad-sb-facebook.on{
+                        display: flex;
+                        a{
+                            text-decoration: none;
+                            color: #fff;
+                            &:hover{
+                                color: #00ffff;
+                            }
+                        }
+                    }
+                    .ad-sb-facebook{
+                        display: none;
+                        a{
+                            text-decoration: none;
+                            color: #fff;
+                            &:hover{
+                                color: #00ffff;
+                            }
+                        }
                     }
                 }
             }

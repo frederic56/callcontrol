@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Image;
 use App\Models\Article;
 use App\Models\Comments;
+use App\Models\Offre;
 use App\Models\Postule;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -43,7 +44,7 @@ class HomepageController extends Controller
         ]);
     }
 
-    public function a_propos()
+    public function blog()
     {
         $id = 1;
         $img = Image::find($id);
@@ -53,7 +54,7 @@ class HomepageController extends Controller
         ]);
     }
 
-    public function nos_service(){
+    public function services(){
         $id = 1;
         $img = Image::find($id);
         $article = Article::all();
@@ -66,6 +67,12 @@ class HomepageController extends Controller
 
     public function postule_user()
     {
+        $id = 1;
+        $img = Image::find($id);
+        return view('page/postule_user', [
+            'fav' => $img,
+            'items' => $img
+        ]);
         return view('page.postule_user');
     }
     public function admin_home()
@@ -117,7 +124,51 @@ class HomepageController extends Controller
             "user_cv" => $pdf_user,
             // "user_id" => Auth::user()->id,
         ]);
-        return redirect('/postuler-user');
+        return redirect('/show-offre');
+    }
+
+    // public function recrutement()
+    // {
+    //     return view('page.recrutement');
+    // }
+
+    public function offre()
+    {
+        return view('admin.offre');
+    }
+
+    public function user_postule(Request $request)
+    {
+        $request->validate([
+            'titre' => 'required',
+            'description' => 'required',
+            'mission' => 'required',
+            'profil' => 'required',
+            'salaire' => ''
+        ]);
+        Offre::create([
+            'titre' => $request->titre,
+            'description' => $request->description,
+            'mission' =>$request->mission,
+            'profil' =>$request->profil,
+            'salaire' =>$request->salaire
+        ]);
+        // dd($request);
+        // die();
+        return redirect('/offre');
+    }
+
+    public function show_offre()
+    {
+        $offres = Offre::all();
+        return view('page.recrutement', [
+            'offres' => $offres
+        ]);
+    }
+
+    public function insert_offre()
+    {
+        return view('admin.insert_offre');
     }
 
     public function add_comment(Request $request)
@@ -126,6 +177,48 @@ class HomepageController extends Controller
                 "comments" => $request->comments
             ]);
         return redirect('/');
+    }
+
+    public function userChart()
+    {
+        $users = User::selectRaw('MONTH(created_at) as month, COUNT(*) as count')
+                        ->whereYear('created_at', date('Y'))
+                        ->groupBy('month')
+                        ->orderBy('month')
+                        ->get();
+
+        $labels = [];
+        $data = [];
+        $colors = ['#FF6384', '#36A2EB', '#FFCE56', '#88C34A', '#FF5722', '#09688', '#795548', '#9C27B0', '#2196F3', '#FF9800', '#CDDC39', '#607D8B'];
+
+        for ($i=1; $i < 12; $i++){
+            $month = date('F', mktime(0,0,0,$i,1));
+            $count = 0;
+
+            foreach ($users as $user) {
+                if($user->month == $i){
+                    $count = $user->count;
+                    break;
+
+                }
+            }
+
+            array_push($labels, $month);
+            array_push($data, $count);
+
+        }
+
+        $datasets = 
+        [
+
+            [
+                'label' => 'Users',
+                'data' =>$data,
+                'backgroundcolor' => $colors
+            ]
+        ];
+        // dd()
+        return view('admin.home', compact('datasets', 'labels'));
     }
 
 }

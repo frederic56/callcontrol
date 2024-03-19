@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Postule;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -115,5 +116,6 @@ class HomeController extends Controller
         $candidate = Postule::orderBy('id', 'desc')->get();
         return view('admin.candidate', ['candidates' => $candidate]);
     }
+
 
 }
