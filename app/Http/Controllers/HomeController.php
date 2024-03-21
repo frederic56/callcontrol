@@ -27,9 +27,22 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index( Request $request)
     {
-        return view('admin.home');
+        dd($request);
+
+        if (Auth::id()) {
+            $usertype = Auth()->user()->usertype;
+            if ($usertype == 'user') {
+                return view('/home');
+            }else if($usertype == 'admin'){
+                return view('admin.home');
+            }else{
+                return redirect()->back();
+            }
+        }
+
+        
     }
 
     public function view_article()

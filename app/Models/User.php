@@ -3,7 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Article;
+use App\Models\Candidature;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -43,8 +43,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // public function articles()
-    // {
-    //     return $this->hasMany(Article::class, 'user_id');
-    // }
+    public function candidature()
+    {
+        return $this->hasMany(Candidature::class, 'user_id');
+    }
+    public function user_file()
+    {
+        return $this->hasMany(user_file::class, 'user_id');
+    }
 }

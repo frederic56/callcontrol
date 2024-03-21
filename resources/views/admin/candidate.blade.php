@@ -21,7 +21,7 @@
                         Action
                     </th>
                     <th>
-                        Titre offre
+                        Titre de l'offre
                     </th>
                 </tr>
             </thead>
@@ -36,13 +36,17 @@
                             <td><a href="{{ $candidate->user_cv}}" target="_blank">View</a></td>                           
                             <td>
                                 <a href="{{ $candidate->user_cv}}" download="{{$candidate->name.'_cv'}}">
-                                <iconify-icon icon="material-symbols-light:download" with="1.3em" height="1.3em"></iconify-icon> 
+                                    <iconify-icon icon="material-symbols-light:download" with="1.3em" height="1.3em"></iconify-icon> 
                                 </a>
                             </td>     
-
-                            <td><a href="/delete-postule/{{ $candidate->id}}">
-                                <iconify-icon icon="fluent:delete-32-regular" with="1.5em" height="1.5em"></iconify-icon>
-                            </a></td>                           
+                            <td>
+                                <a href="/delete-postule/{{ $candidate->id}}">
+                                    <iconify-icon icon="fluent:delete-32-regular" with="1.5em" height="1.5em"></iconify-icon>
+                                </a>
+                        </td>  
+                        <td>
+                            {{ $candidate->offre->titre }}
+                        </td>                         
                         </tr>
 
                     @endforeach

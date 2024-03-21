@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Auth;
 
 class HomepageController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        dd($request);
         $id  = 1;
         $img = Image::find($id);
         return view('page/body', [
@@ -67,13 +68,12 @@ class HomepageController extends Controller
 
     public function postule_user()
     {
-        $id = 1;
-        $img = Image::find($id);
-        return view('page/postule_user', [
-            'fav' => $img,
-            'items' => $img
-        ]);
-        return view('page.postule_user');
+        if (Auth::user() == null ) {
+
+            return view('page.inscription');
+        }else{
+            return view('page.postule_user');
+        }
     }
     public function admin_home()
     {

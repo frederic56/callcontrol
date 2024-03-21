@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('offres', function (Blueprint $table) {
-            $table->id();
-            $table->string('titre');
-            $table->longText('description');
-            $table->longText('mission')->nullable();
-            $table->longText('profil');
-            $table->boolean('salaire');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('roles')->default('user');
+            $table->string('default_cv')->nullable();
         });
+
     }
 
     /**

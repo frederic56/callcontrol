@@ -2,13 +2,13 @@
     <div class="header-container">
         <div class="logo">
             <a href="/">
-              @if ($fav == null)
-                  <h4>CallControl</h4>
+                <h4>CallControl</h4>
+              {{-- @if ($fav == null)
               @else
                   @foreach ($fav as $img)
                       <img src="{{$img->logo}}" alt="" srcset="">
                   @endforeach
-              @endif
+              @endif --}}
             </a>
         </div>
         <nav class="h-nav">
