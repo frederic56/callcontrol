@@ -12,33 +12,27 @@
             @csrf
             <div class="insert-user">
                 <label for="">Titre de l'offre</label>
-                <input type="text" name="titre" id="">
+                <input type="text" name="title" id="" class="form-control">
             </div>
             <div class="insert-user">
                 <label for="">Description de l'offre</label>
-                <textarea name="description" id="" cols="30" rows="5"></textarea>
+                <textarea name="description" id="" cols="30" rows="5" class="form-control"></textarea>
             </div>
             <div class="insert-user">
-                <label for="">Mision</label>
-                <textarea name="mission" id="" cols="30" rows="5"></textarea>
+                <label for="">Reference</label>
+                <input type="text" name="reference" id="" class="form-control">
             </div>
             <div class="insert-user">
-                <label for="profil">Profil requis</label>
-                <textarea name="profil" id="" cols="30" rows="10"></textarea>
+                <label for="fourchette_salariale">Fourchette Salariale</label>
+                <input type="text" name="fourchette_salariale" id="" class="form-control">
             </div>
-            <div class="offre_salary">
-                <label for="">Salaire</label>
-                <select name="salaire" id="">...
-                    <option value="1">Moins de 1M Ar </option>
-                    <option value="2">Plus de 1M Ar </option>
-                    <option value="3">Personaliser </option>
-                    <option value="4">Pretension Salariale </option>
-
-                </select>
-
+            <div class="">
+                <label for="">Delai de l'offre</label>
+                <input type="date" name="date_validite" id="" class="form-control">
             </div>
-            <button type="submit">Ajouter</button>
+            <button type="submit" class="btn btn-primary mt-2">Ajouter</button>
         </form>
     </div>
 </div>
 @endsection
+

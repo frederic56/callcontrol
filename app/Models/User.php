@@ -47,8 +47,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Candidature::class, 'user_id');
     }
+
+    /**
+     * Relation ManyToMany
+     * Between User and File
+     * Pivot user_file
+     */
+    public function file()
+    {
+        return $this->belongsToMany(File::class);
+    }
+
     public function user_file()
     {
-        return $this->hasMany(user_file::class, 'user_id');
+        return $this->hasMany(user_file::class);
     }
 }

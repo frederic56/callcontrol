@@ -19,7 +19,7 @@ return new class extends Migration
             $table->longText('description');
             $table->string('reference');
             $table->string('fourchette_salariale');
-            $table->date('date_validité');
+            $table->date('date_validite');
             $table->timestamps();
 
            // $table->foreignId('offre_id')->constrained();
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('offres');
     }
 };

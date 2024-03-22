@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Candidature;
 use App\Models\Postule;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class HomeController extends Controller
      */
     public function index( Request $request)
     {
-        dd($request);
+        //dd($request);
 
         if (Auth::id()) {
             $usertype = Auth()->user()->usertype;
@@ -41,7 +42,6 @@ class HomeController extends Controller
                 return redirect()->back();
             }
         }
-
         
     }
 
@@ -126,7 +126,7 @@ class HomeController extends Controller
 
     public function admin_candidate()
     {
-        $candidate = Postule::orderBy('id', 'desc')->get();
+        $candidate = Candidature::orderBy('id', 'desc')->get();
         return view('admin.candidate', ['candidates' => $candidate]);
     }
 

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->id();
             // $table->string('offre_id');
             // $table->string('user_id');
-            $table->foreignId('offre_id')->constrained();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('offre_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('cv');
             $table->string('complement_dossier');
             $table->string('introduction');
@@ -40,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('candidatures');
     }
 };

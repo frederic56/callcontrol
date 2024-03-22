@@ -25,8 +25,21 @@ class Candidature extends Model
         return $this->belongsTo(User::class);
     }
 
+    
+    /**
+     * Relation ManyToMany
+     * Between Candidature and File
+     * Pivot candidature_file
+     */
+    
+    public function file()
+    {
+        return $this->belongsToMany(File::class);
+    }
     public function candidature_files()
     {
-        return $this->hasMany(candidature_files::class, 'id_candidatures');
+        return $this->hasMany(candidature_files::class);
     }
+
+
 }

@@ -11,7 +11,7 @@ class Offre extends Model
     use HasFactory;
     protected $table = 'offres';
     protected $primarykey = 'id';
-    protected $fillable = ['title', 'description', 'reference', 'fouchette_salariale', 'date_validité'];
+    protected $fillable = ['title', 'description', 'reference', 'fourchette_salariale', 'date_validite'];
 
     public function candidature()
     {

@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use App\Models\Article;
+use App\Models\Candidature;
 use App\Models\Comments;
 use App\Models\Offre;
-use App\Models\Postule;
 use App\Models\User;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomepageController extends Controller
 {
+    
     public function index(Request $request)
     {
         dd($request);
@@ -117,7 +119,7 @@ class HomepageController extends Controller
         // dump(Auth::user()->id);
         // die();
 
-        Postule::create([
+        Candidature::create([
             "name"=> $request->name,
             "email"=> $request->email,
             "number"=> $request->number,
@@ -137,24 +139,21 @@ class HomepageController extends Controller
         return view('admin.offre');
     }
 
-    public function user_postule(Request $request)
+  
+    public function add_offre(Request $request)
     {
         $request->validate([
-            'titre' => 'required',
-            'description' => 'required',
-            'mission' => 'required',
-            'profil' => 'required',
-            'salaire' => ''
+            'title' => ['required', 'string', 'max:255']
         ]);
+
         Offre::create([
-            'titre' => $request->titre,
+            'title' => $request->title,
             'description' => $request->description,
-            'mission' =>$request->mission,
-            'profil' =>$request->profil,
-            'salaire' =>$request->salaire
+            'reference' => $request->reference,
+            'fourchette_salariale' => $request->fourchette_salariale,
+            'date_validite' => $request->date_validite
         ]);
-        // dd($request);
-        // die();
+        //dd($request);
         return redirect('/offre');
     }
 

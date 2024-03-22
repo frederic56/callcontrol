@@ -38,7 +38,7 @@ Route::post('/logo', [ImagesController::class, 'logo'])->name('logo');
 Route::post('/article', [ImagesController::class, 'article'])->name('article');
 Route::post('/insert-postuler', [HomepageController::class, 'insert_postule'])->name('insert-postuler');
 Route::post('/user-comment', [HomepageController::class, 'add_comment'])->name('user-comment');
-Route::post('/add-offre', [HomepageController::class, 'user_postule'])->name('add-offre');
+Route::post('/add-offre', [HomepageController::class, 'add_offre'])->name('add-offre');
 
 //END INSERT
 

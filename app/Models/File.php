@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\candidature_files;
+use App\Models\user_file;
 
 class File extends Model
 {
@@ -13,12 +14,28 @@ class File extends Model
     protected $primarykey = 'id';
     protected $fillable = ['name', 'size', 'path'];
 
-    public function user_files()
+    public function user()
     {
-        return $this->hasMany(user_file::class, 'file_id');
+        return $this->belongsToMany(User::class);
     }
+
+    public function user_file()
+    {
+        return $this->hasMany(user_file::class);
+    }
+
+    /**
+     * Relation ManyToMany
+     * Between candidature and File
+     * Pivot candidature_file
+     */
     public function candidature()
     {
-        return $this->hasMany(candidature_files::class, 'id_files');
+        return $this->belongsToMany(Candidature::class);
+    }
+
+    public function candidature_files()
+    {
+        return $this->hasMany(candidature_files::class);
     }
 }
